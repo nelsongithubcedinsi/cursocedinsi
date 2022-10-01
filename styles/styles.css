@@ -11,6 +11,8 @@ body{
 table{
     border-collapse: collapse;
     background-color: aqua;
+    width: 100%;
+    align-items: center;
 }
 
 caption{
