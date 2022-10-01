@@ -2,10 +2,21 @@ body{
     background-color: rgb(0, 255, 242);
     font-size: 20px;
 }
-
+ h1{
+    color: rgb(20, 183, 96);
+ }
+ h3{
+    color:rgb(225, 178, 59)
+ }
 table{
     border-collapse: collapse;
     background-color: aqua;
+}
+
+caption{
+    color: darkgreen;
+    font-size: 50px ;
+    font-weight: bold;
 }
 
 th,td{
@@ -13,10 +24,18 @@ th,td{
     padding: 5px;
 }
 
-tr,th{
-    background-color: chocolate;
+th{
+    background-color: rgb(247, 168, 104);
 }
 
-tbody,tr:hover{
-  background-color: azure;   
+tbody, tr{
+    background-color: rgb(100, 214, 237);
+    font-size: 20px;
+    font-weight: normal;
 }
+tbody,tr:hover{
+  background-color: azure;  
+  font-size: 25x; 
+  font-weight: bold;
+}
+
