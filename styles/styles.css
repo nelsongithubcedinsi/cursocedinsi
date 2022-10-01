@@ -2,3 +2,21 @@ body{
     background-color: rgb(0, 255, 242);
     font-size: 20px;
 }
+
+table{
+    border-collapse: collapse;
+    background-color: aqua;
+}
+
+th,td{
+    border-style: ridge;
+    padding: 5px;
+}
+
+tr,th{
+    background-color: chocolate;
+}
+
+tbody,tr:hover{
+  background-color: azure;   
+}
