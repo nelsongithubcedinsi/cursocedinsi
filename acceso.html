@@ -7,13 +7,16 @@
     <title>Registro o Acceso</title>
     <link rel="stylesheet" href="styles/acceso.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <header>
         <section id="arriba"></section>
         <!-- <a href="index.html"><img src="Cristo Rey Pamplona.png" width="100px" height="" alt="Imagen de Cristo Rey"/></a> -->
-        <a href="index.html"><img src="imagenes/CristoReySitioWEB.jpg" width="100px" height="" alt="Imagen de Cristo Rey"/></a>
+        <a href="acceso.html"><img src="imagenes/CristoReySitioWEB.jpg" width="100px" height="" alt="Imagen de Cristo Rey"/></a>
 
         <!-- procura utilizar todos los estilos css de forma externa en los documentos .css -->
         <h1>Selección de personal</h1>
@@ -25,18 +28,20 @@
             <a href="#abajo">Ir direcciones relacionadas</a>
         </nav>
     </header>
-
+  <main>
     <section>
       <form>
         <img src="imagenes/CristoReySitioWEB.jpg" width="25%" alt="Imagen CristoRey">
         <Input type="text" placeholder="Digite su correo electrónico"></Input>
         <input type="password" placeholder="Digite su contraseña (no debe ser la del ingreso a su correo)">
         <button type="submit">Entrar a Cristo Rey</button>
-        <input type="checkbox" name="Recordar">
-        <label for="Recordar">Recordar sus credenciales</label>
+        <div class="RecordarCredenciales">
+            <input type="checkbox" name="Recordar">
+            <label for="Recordar">Recordar sus credenciales</label>
+        </div>
       </form>
     </section>
-
+  </main>
     <footer>
         <a target="_blank" href="https://www.mintrabajo.gov.co"> <img src="imagenes/Icomintrabajo.jpg" width="200px" alt=""></a> 
         <a target="_blank"  href="https://www.gobiernoenlinea.com.co"><img src="imagenes/IcoGovEnLinea.jpg" width="200px" alt=""></a>

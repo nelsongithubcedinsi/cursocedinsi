@@ -12,3 +12,6 @@ h1{
 h3{
     color:rgb(235, 245, 123)
  }
+ head>a>img{
+    border-radius: 30px;
+ }
