@@ -4,8 +4,10 @@ form {
    left:35%;
    width: 30%;
    text-align: center;
+   background-color: blue;
 }
 form>img{
+    width: 100px;
   padding-bottom: 30px;
 
 }
