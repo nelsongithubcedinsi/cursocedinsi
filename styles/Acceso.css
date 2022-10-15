@@ -1,6 +1,6 @@
 form {
    position: absolute;
-   top: 200px;
+   top: 100px;
    left:35%;
    width: 30%;
    text-align: center;
@@ -48,9 +48,20 @@ form>button:hover{
 
 .mapa{
   position: absolute;
-   top: 350px;
-   left:70%;
-   width: 30%;
+   top: 700px;
+   /*left:70%;*/
+   width: 100%;
    text-align: center;
-   margin-bottom: 50px;
+   margin-bottom: 100px;
+}
+
+.video{
+  position: absolute;
+  top: 00px;
+  right: 60px;
+}
+
+footer{
+  position:absolute;
+  bottom: 20px;
 }
