@@ -6,23 +6,52 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Quienes Somos </title>
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
     </head>
     <body>
        
             <header>
                 <section id="arriba"></section>
-                <a  href="index.html"><img src="imagenes/CristoReySitioWEB.jpg" width="100px" height="" alt="Imagen de Cristo Rey"/></a>
+              
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                    <a href="index.html" class="navbar-brand"><img src="imagenes/CristoReySitioWEB.jpg" alt="Imagen de Cristo Rey" width="50px"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Inicio </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="QuienesSomos.html" class="nav-link">Quienes somos </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="TiposDeEmpresa.html" class="nav-link">Tipos de empresa </a> 
+                        </li>
+                        <!-- <li class="nav-item">
+                            <p>Siguenos en</p> 
+                        </li> -->
+                        <li class="nav-item">
+                           <a href="https://www.facebook.com" class="nav-item"><img src="imagenes/icofacebook.jpeg" width="20px" alt="Enlace a Facebook"> _ </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.twiter.com" class="nav-item"><img src="imagenes/IcoTwiter.jpg" width="20px" alt="Enlace para Twiter"> _ </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#abajo"> Sitios relacionados </a>
+                        </li>
+                    </ul> 
+                    </div>      
+                </nav>
+                <!-- <a  href="index.html"><img src="imagenes/CristoReySitioWEB.jpg" width="100px" height="" alt="Imagen de Cristo Rey"/></a> -->
+              
                 <h1>Selección de personal</h1>
                 <h3>Prueba si tu perfil cumple con lo requerido por la empresa</h3>
-                <nav>
-                    <a href="QuienesSomos.html">Quienes somos </a> <a href="TiposDeEmpresa.html">Tipos de empresa</a>  
-                    Siguenos en <a href="https://www.facebook.com"><img src="imagenes/icofacebook.jpeg" width="20px" alt="Enlace a Facebook"></a>
-                     <a href="https://www.twiter.com"><img src="imagenes/IcoTwiter.jpg" width="20px" alt="Enlace para Twiter"></a>      
-                    <a href="#abajo">Ir direcciones relacionadas</a>
-                </nav>
-                
             </header>
-        <!-- <div>______________________________________________________________</div><br> -->
+        <section class="container-fluid">
+         <div class="jumbotron bg-primary text-white">
             <h2>Quienes Somos</h2>
 
             <p>Somos una empresa que busca estandarizar de alguna manera los perfiles de los cargos en las empresas buscando con esto que las
@@ -33,12 +62,20 @@
                 <img src="" alt="">
 
         
-        <!-- <div>_____________________________________________________________________________________________</div><br> -->
+        </div>
+        </section>
+        <div class="mapa"> 
+            <h2>Nos encontramos aquí</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5595.737898829543!2d-72.6456679790749!3d7.378064644033727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1665118678826!5m2!1ses-419!2sco" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         <footer>
             <a target="_blank" href="https://www.mintrabajo.gov.co"> <img src="imagenes/Icomintrabajo.jpg" width="200px" alt=""></a> 
             <a target="_blank"  href="https://www.gobiernoenlinea.com.co"><img src="imagenes/IcoGovEnLinea.jpg" width="200px" alt=""></a>
             <section id="abajo"> <a href="#arriba">Ir al encabezado</a></section>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+        
     </body>
 
 </html>

@@ -10,9 +10,17 @@ header{
 h1{
     color: rgb(31, 245, 131);
 }
+h2{
+    text-align: center;
+}
 h3{
     color:rgb(235, 245, 123)
  }
  head>a>img{
     border-radius: 30px;
+ }
+
+ nav{
+    padding: 10px;
+    margin: 10px;
  }
