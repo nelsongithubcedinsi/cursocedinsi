@@ -5,7 +5,7 @@ table{
     align-items: center;
 }
 
-caption{
+table>caption{
     color: darkgreen;
     font-size: 50px ;
     font-weight: bold;

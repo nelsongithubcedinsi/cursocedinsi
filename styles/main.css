@@ -24,3 +24,17 @@ h3{
     padding: 10px;
     margin: 10px;
  }
+ .card{
+    padding: 10px;
+ }
+ #desarrollado{
+    text-align: center;
+ }
+ .card:hover{
+    background-color: rgb(228, 255, 196);
+    text-align: center;
+    font-size: 25x; 
+    font-weight: bold;
+    transition: 0.5s;
+   
+ }
