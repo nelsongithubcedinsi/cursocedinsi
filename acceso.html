@@ -39,16 +39,20 @@
         <iframe width="150" height="75" src="https://www.youtube.com/embed/ShjFgangHpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
      <section>
-      <form>
+      <form name="ingreso" onsubmit="return validar()" action="#">
         <img src="imagenes/CristoReySitioWEB.jpg" width="25%" alt="Imagen CristoRey">
-        <Input type="text" placeholder="Correo electrónico"></Input>
-        <input type="password" placeholder="Contraseña (diferente del ingreso al correo)">
-        <button type="submit">Entrar a Cristo Rey</button>
+        <input type="text" placeholder="Correo electrónico" id="mailUser"></Input>
+        <input type="password" placeholder="Contraseña (diferente del ingreso al correo)" id="claveUser">
+        <button type="submit" name="btnEnviar">Entrar a Cristo Rey</button>
         <div class="RecordarCredenciales">
-            <input type="checkbox" name="Recordar">
+            <input type="checkbox" name="recordar">
             <label for="Recordar">Recordar sus credenciales</label>
         </div>
+        <hr>
+          <span id="MensajesDelSistema"></span>
+        <hr>
       </form>
+
     </section>
     <div class="mapa"> 
         <h2>Nos encontramos aquí</h2>
@@ -62,7 +66,7 @@
         <p id="desarrollado">Desarrollado por: Nelson Gabriel Mogollón Afanador       Octubre 2022</p>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="./js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
 

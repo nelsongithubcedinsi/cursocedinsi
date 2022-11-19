@@ -65,3 +65,8 @@ footer{
   position:absolute;
   bottom: 20px;
 }
+
+.errorBox{
+  border: 2px solid red;
+  font-size: 15px; 
+}
