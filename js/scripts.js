@@ -15,8 +15,6 @@ function validaCampos (campo){
     {  // alert(`El contenido del campo es ${campo.value}`);
         campo.classList.remove("errorBox");
         mensajeError.innerHTML=`<p>Información adecuada para ingreso </p>`
-        
-        
     } 
 }
 
