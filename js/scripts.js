@@ -8,20 +8,25 @@ function validaCampos (campo){
    mensajeError.innerHTML=`<p></p>`
     if(campo.value=="" ){
         //alert(`No ha digitado información requerida en el campo ${campo.name}`);
-        campo.classList.add("errorBox");
-        mensajeError.innerHTML=`<p>No ha digitado información requerida </p>`        
-        return false
+        campo.classList.add("errorBox");     
+      return 0;
     }else 
     {  // alert(`El contenido del campo es ${campo.value}`);
         campo.classList.remove("errorBox");
-        mensajeError.innerHTML=`<p>Información adecuada para ingreso </p>`
+        return 1;
     } 
 }
 
 function validar(){
+    let SioNo =0;
    // console.log("Entrando a la función validar...")
-    validaCampos(correo);
-    validaCampos(clave);
+    SioNo += validaCampos(correo);
+    SioNo += validaCampos(clave);
+    if(SioNo<2){
+        mensajeError.innerHTML=`<p>No ha digitado información requerida </p>`  
+    }else {
+        mensajeError.innerHTML=`<p>Información adecuada para ingreso </p>`
+    }
 
 }
 
