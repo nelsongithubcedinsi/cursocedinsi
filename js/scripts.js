@@ -2,11 +2,34 @@
 const correo = document.getElementById("mailUser");
 const clave = document.getElementById("claveUser");
 const mensajeError = document.getElementById("MensajesDelSistema");
+const nombreRegex = /^([a-zA-ZÁ-ÓÖö-ÿ]{4-30})([\s]?)([a-zA-ZÁ-ÓÖö-ÿ]{4-30})$/g;
+const edadRegex = /(^[0-9]{1-2}$)/g;
+const textoRegex = /^([a-zA-ZÁ-ÓÖö-ÿ]{4-100})([\s]?)$/g
+const numeroRegex = /(^[0-9]{1-30}$)/g;
+const correoRegex = /^([\w.]+[^#$%&\/()='"¡?!]\w*-*)([@])(\w)+(\.[a-z]{1-3})$/g; 
+const claveRegex = /^([a-zA-ZÁ-ÓÖö-ÿ]+[^#$%&\/()='"¡?!]\w*-*)$/g;
 
-function validaCampos (campo){
+function validaCampos (campo, tipoCampo){
+   //el parametro tipoCampo es para indicar si es texto, numeros, correo, mixto, etc.
+   //tipoCampo 1 (texto)  2 (números)  3 (mail) 4 (nombres)  5 (edad) 6 (clave)
    // console.log("Entre a la funcion validaCampos")
+   let regCompare ="";
+   switch (tipoCampo){
+       case 1: {regCompare = textoRegex;  break;}
+       case 2: {regCompare = numeroRegex; break;}
+       case 3: {regCompare = correoRegex; break;}
+       case 4: {regCompare = nombreRegex; break;}
+       case 5: {regCompare = edadRegex; break;}
+       case 6: {regCompare = claveRegex; break;}
+       default: {regCompare = "";}
+    }
+
    mensajeError.innerHTML=`<p></p>`
-    if(campo.value=="" ){
+   const valor = campo.addEventListener('change', (e) => {
+      e.target.value.match(regCompare) ? true : false;})
+    console.log(valor);
+    if(campo.value=="" || !valor){
+    
         //alert(`No ha digitado información requerida en el campo ${campo.name}`);
         campo.classList.add("errorBox");     
       return 0;
@@ -20,8 +43,8 @@ function validaCampos (campo){
 function validar(){
     let SioNo =0;
    // console.log("Entrando a la función validar...")
-    SioNo += validaCampos(correo);
-    SioNo += validaCampos(clave);
+    SioNo += validaCampos(correo,3);
+    SioNo += validaCampos(clave, 6);
     if(SioNo<2){
         mensajeError.innerHTML=`<p>No ha digitado información requerida </p>`  
     }else {
@@ -29,6 +52,28 @@ function validar(){
     }
 
 }
+
+
+
+
+function llamarApi(){
+    const imagenEnApi = document.getElementById("imagenRicky");
+    const nombreEnApi = document.getElementById("nombre");
+    const generoEnApi = document.getElementById("genero");
+
+    console.log("Usuario dio click...")
+   fetch('https://rickandmortyapi.com/api/character/1')
+    .then(response=> response.json())
+    .then (function(data){
+        console.log(data);
+        imagenEnApi.setAttribute('src',data.image);
+        nombreEnApi.innerHTML=data.name;
+        generoEnApi.innerHTML=data.gender;
+        
+    })
+    //.then(json => console.log(json))
+}
+
 
 /*console.log(correo.name);
 console.log(clave.name);
