@@ -6,8 +6,8 @@ const nombreRegex = /^([a-zA-ZÁ-ÓÖö-ÿ]{4-30})([\s]?)([a-zA-ZÁ-ÓÖö-ÿ]{4
 const edadRegex = /(^[0-9]{1-2}$)/g;
 const textoRegex = /^([a-zA-ZÁ-ÓÖö-ÿ]{4-100})([\s]?)$/g
 const numeroRegex = /(^[0-9]{1-30}$)/g;
-const correoRegex = /^([\w.]+[^#$%&\/()='"¡?!]\w*-*)([@])(\w)+(\.[a-z]{1-3})$/g; 
-const claveRegex = /^([a-zA-ZÁ-ÓÖö-ÿ]+[^#$%&\/()='"¡?!]\w*-*)$/g;
+const correoRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/g; 
+const claveRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/g;
 
 function validaCampos (campo, tipoCampo){
    //el parametro tipoCampo es para indicar si es texto, numeros, correo, mixto, etc.
