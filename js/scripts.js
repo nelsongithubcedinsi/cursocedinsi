@@ -1,4 +1,5 @@
 /*console.log("Estoy en el archivo indicado para el formulario")*/
+const form = document.getElementById("formulario");
 const correo = document.getElementById("mailUser");
 const clave = document.getElementById("claveUser");
 const mensajeError = document.getElementById("MensajesDelSistema");
@@ -8,6 +9,31 @@ const textoRegex = /^([a-zA-ZÁ-ÓÖö-ÿ]{4-100})([\s]?)$/g
 const numeroRegex = /(^[0-9]{1-30}$)/g;
 const correoRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/g; 
 const claveRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/g;
+
+
+const formValid = {
+    correo: false,
+    clave: false,
+    recordar: false
+} 
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (validarFormulario() === -1){
+        alert("Enviando formulario");
+    } else {
+        alert("Error de valores en el formulario");
+    }
+})
+
+const validarFormulario = () => {
+    const formValues = Object.values(formValid);
+    //console.log(formValues);
+    let valores = formValues.findIndex(v => v === false);
+    console.log(valores);
+    return valores;
+}
+
 
 function validaCampos (campo, tipoCampo){
    //el parametro tipoCampo es para indicar si es texto, numeros, correo, mixto, etc.
@@ -25,9 +51,13 @@ function validaCampos (campo, tipoCampo){
     }
 
    mensajeError.innerHTML=`<p></p>`
-   const valor = campo.addEventListener('change', (e) => {
+   let valor = false;
+   valor = campo.addEventListener('change', (e) => {
       e.target.value.match(regCompare) ? true : false;})
-    console.log(valor);
+      console.log("este es el resultado de la comparación: ",campo.addEventListener('change', (e) => {e.target.value.match(regCompare) ? true : false;}))
+    console.log(`Este es el resultado de evaluar el campo ${campo} 
+    con el patron ${regCompare}:`,valor);
+  
     if(campo.value=="" || !valor){
     
         //alert(`No ha digitado información requerida en el campo ${campo.name}`);
@@ -45,6 +75,7 @@ function validar(){
    // console.log("Entrando a la función validar...")
     SioNo += validaCampos(correo,3);
     SioNo += validaCampos(clave, 6);
+    console.log(`Este es el valor de la variable SioNo : ${SioNo}`);
     if(SioNo<2){
         mensajeError.innerHTML=`<p>No ha digitado información requerida </p>`  
     }else {
