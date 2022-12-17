@@ -54,7 +54,7 @@ function validaCampos (campo, tipoCampo){
    let valor = false;
    valor = campo.addEventListener('change', (e) => {
       e.target.value.match(regCompare) ? true : false;})
-      console.log("este es el resultado de la comparación: ",campo.addEventListener('change', (e) => {e.target.value.match(regCompare) ? true : false;}))
+      console.log("este es el resultado de la comparación: ",campo.addEventListener('change', (e) => {e.target.value.match(regCompare)}))
     console.log(`Este es el resultado de evaluar el campo ${campo} 
     con el patron ${regCompare}:`,valor);
   
